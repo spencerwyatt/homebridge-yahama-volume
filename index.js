@@ -155,5 +155,6 @@ YamahaVolumeAccessory.prototype = {
 
       callback();
     });
+  }
   
 };
