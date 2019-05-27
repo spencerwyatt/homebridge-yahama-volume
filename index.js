@@ -60,7 +60,7 @@ YamahaVolumePlatform.prototype = {
             // If no inputs defined in config - set available inputs as returned from receiver
             this.YAMAHA.getAvailableInputs().then((availableInputs) => {
               callback([
-                new YamahaAVRAccessory(
+                new YamahaVolumeAccessory(
                   this.log,
                   this.config,
                   this.YAMAHA,
