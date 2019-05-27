@@ -96,13 +96,15 @@ YamahaVolumeAccessory.prototype = {
   volumeUpService() {
     this.switchService = new Service.Switch("Volume Up", "up");
     
+    this.direction = 0;
+    
     this.switchService
       .getCharacteristic(Characteristic.On)
       .on('get', function(callback, context) {
         callback(false, false);
       }.bind(this))
-      .on('set', (0, callback) => {
-        this.setVolume(direction, callback);
+      .on('set', (this.direction, callback) => {
+        this.setVolume(this.direction, callback);
       })
       .getValue(null, null); // force an asynchronous get
   },
@@ -110,13 +112,15 @@ YamahaVolumeAccessory.prototype = {
   volumeDownService() {
     this.switchService = new Service.Switch("Volume Down", "down");
     
+    this.direction = 1;
+    
     this.switchService
       .getCharacteristic(Characteristic.On)
       .on('get', function(callback, context) {
         callback(false, false);
       }.bind(this))
-      .on('set', (1, callback) => {
-        this.setVolume(direction, callback);
+      .on('set', (this.direction, callback) => {
+        this.setVolume(this.direction, callback);
       })
       .getValue(null, null); // force an asynchronous get
   },
