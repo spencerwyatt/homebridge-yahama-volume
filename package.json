@@ -1,4 +1,6 @@
 {
+  "name": "homebridge-yamaha-volume",
+  "version": "0.0.1",
   "bundleDependencies": false,
   "dependencies": {
     "ip": "^=1.1.5",
