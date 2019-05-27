@@ -1,6 +1,22 @@
 {
   "name": "homebridge-yamaha-volume",
   "version": "0.0.1",
+  "description": "Sample Platform plugin for homebridge: https://github.com/spencerwyatt/homebridge-yamaha-volume",
+  "license": "ISC",
+  "keywords": [
+    "homebridge-plugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/spencerwyatt/homebridge-yahama-volume.git"
+  },
+  "bugs": {
+    "url": "http://github.com/spencerwyatt/homebridge-yamaha-volume/issues"
+  },
+  "engines": {
+    "node": ">=0.12.0",
+    "homebridge": ">=0.2.0"
+  }
   "bundleDependencies": false,
   "dependencies": {
     "ip": "^=1.1.5",
