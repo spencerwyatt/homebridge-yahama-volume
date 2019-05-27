@@ -89,33 +89,33 @@ YamahaVolumeAccessory.prototype = {
 
 
   volumeUpService() {
-    this.switchService = new Service.Switch("Volume Up", "up");
+    this.volumeUpService = new Service.Switch("Volume Up", "up");
     
-    this.direction = 0;
+    //this.direction = 0;
     
-    this.switchService
+    this.volumeUpService
       .getCharacteristic(Characteristic.On)
       .on('get', function(callback, context) {
         callback(false, false);
       }.bind(this))
       .on('set', (direction, callback) => {
-        this.setVolume(this.direction, callback);
+        this.setVolume(0, callback);
       })
       .getValue(null, null); // force an asynchronous get
   },
 
   volumeDownService() {
-    this.switchService = new Service.Switch("Volume Down", "down");
+    this.volumeDownService = new Service.Switch("Volume Down", "down");
     
-    this.direction = 1;
+    //this.direction = 1;
     
-    this.switchService
+    this.volumeDownService
       .getCharacteristic(Characteristic.On)
       .on('get', function(callback, context) {
         callback(false, false);
       }.bind(this))
       .on('set', (direction, callback) => {
-        this.setVolume(this.direction, callback);
+        this.setVolume(1, callback);
       })
       .getValue(null, null); // force an asynchronous get
   },
