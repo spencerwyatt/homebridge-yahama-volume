@@ -103,7 +103,7 @@ YamahaVolumeAccessory.prototype = {
       .on('get', function(callback, context) {
         callback(false, false);
       }.bind(this))
-      .on('set', (this.direction, callback) => {
+      .on('set', (direction, callback) => {
         this.setVolume(this.direction, callback);
       })
       .getValue(null, null); // force an asynchronous get
@@ -119,7 +119,7 @@ YamahaVolumeAccessory.prototype = {
       .on('get', function(callback, context) {
         callback(false, false);
       }.bind(this))
-      .on('set', (this.direction, callback) => {
+      .on('set', (direction, callback) => {
         this.setVolume(this.direction, callback);
       })
       .getValue(null, null); // force an asynchronous get
