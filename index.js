@@ -27,11 +27,6 @@ function YamahaVolumeAccessory(log, config, yamaha, sysConfig, inputs) {
   this.enabledServices = [];
   this.playing = true;
 
-  // Check & Update Accessory Status every 5 seconds
-  this.checkStateInterval = setInterval(
-    this.checkAVRState.bind(this, this.updateAVRState.bind(this)),
-    5000,
-  );
 }
 
 module.exports = (homebridge) => {
